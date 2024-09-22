@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donation Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white font-lexend">
+
+    <!-- --------header-------- -->
+    <header class="bg-rose-50 h-min-32 w-full px-2 lg:px-0">
+      <!-- ---navbar--- -->
+      <div
+        class="container mx-auto flex flex-col lg:flex-row justify-center gap-6 lg:gap-0 lg:justify-between py-6"
+      >
+        <!-- -----mobile responsive ---  -->
+        <div class="flex lg:hidden justify-between items-center">
+          <div class="">
+            <button
+              class="btn btn-blog border-none font-bold text-xl px-6 py-2 bg-lime-300 hover:bg-lime-50"
+            >
+              Home
+            </button>
+          </div>
+          <div class="flex items-center gap-3">
+            <img src="assets/coin.png" alt="" />
+            <h1 class="font-medium text-xl text-[rgba(17,17,17,0.7)]">
+              5500 BDT
+            </h1>
+          </div>
+        </div>
+        <!-- ----mobile responsive end--- -->
+        <div class="hidden lg:block">
+          <button
+            class="btn btn-blog border-none font-bold text-xl px-6 py-2 bg-lime-300 hover:bg-lime-50"
+          >
+            Home
+          </button>
+        </div>
+        <div class="flex items-center justify-center gap-3">
+          <img class="w-9 lg:w-auto" src="assets/logo.png" alt="" />
+          <h1 class="font-bold text-xl">Donate Bangladesh</h1>
+        </div>
+        <div class="items-center gap-3 hidden lg:flex">
+          <img src="assets/coin.png" alt="" />
+          <h1 class="font-medium text-xl text-[rgba(17,17,17,0.7)]">
+            5500 BDT
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 lg:px-0 mt-12 lg:mt-20">
+        <div class="flex gap-3 justify-center lg:justify-start">
+            <h1 class="font-bold text-xl lg:text-3xl">Important FAQ</h1>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+              </svg>
+
+        </div>
+
+        <div class="mt-12 lg:mt-20 space-y-6">
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, making it possible for programming languages like JavaScript to interact with and manipulate the content, structure, and styles of a website dynamically.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>To select an element from the DOM (Document Object Model) in JavaScript, there are several methods we can use. These methods allow us to target specific elements based on their attributes like id, class, tag name, or more complex selectors.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">what is event delegation in the context of DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p>Event delegation is a technique in the DOM where I attach a single event listener to a parent element to handle events for its child elements. Instead of adding event listeners to multiple child elements individually, I rely on event bubbling, where an event on a child "bubbles up" to its parent. This is useful because it reduces the number of event listeners needed, improves performance, and handles dynamically added elements without needing to reattach listeners.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate and element's attributes and styles using the DOM?
+
+                </div>
+                <div class="collapse-content">
+                  <p>To manipulate an element's attributes and styles in the DOM, I use methods like setAttribute() to change attributes, getAttribute() to retrieve them, and removeAttribute() to remove them. For styles, I can modify inline styles directly using the style property (e.g., element.style.color = 'red'), or manage CSS classes with classList methods like add(), remove(), and toggle() to dynamically change the appearance of elements. These tools allow me to update the content and style of elements in real-time.</p>
+                </div>
+              </div>
+        </div>
+       
+          
+
+    </main>
+    <script src="js/fund.js"></script>
+  </body>
+</html>
