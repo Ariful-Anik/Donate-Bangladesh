@@ -33,6 +33,7 @@ donationBtn.addEventListener('click', function(){
     historyBtn.style.backgroundColor ='white';
     donationBtn.style.backgroundColor = 'rgb(180, 244, 97)';
     document.getElementById('donation-div').classList.remove('hidden');
+    document.getElementById('historySection').classList.remove('flex');
     document.getElementById('historySection').classList.add('hidden');
 })
 historyBtn.addEventListener('click', function(){
@@ -40,6 +41,7 @@ historyBtn.addEventListener('click', function(){
     historyBtn.style.backgroundColor = 'rgb(180, 244, 97)';
     document.getElementById('donation-div').classList.add('hidden');
     document.getElementById('historySection').classList.remove('hidden');
+    document.getElementById('historySection').classList.add('flex');
 })
 
 
@@ -59,7 +61,7 @@ console.log(donationButtons);
 const historySection = document.getElementById('historySection');
 
 // Function to update balance and history
-function updateDonation(card, amount) {
+function updateDonation(card, amount, details) {
     const currentAmountElement = card.querySelector('.text-gray-500');
     const currentAmount = parseInt(currentAmountElement.textContent);
     const newAmount = currentAmount + amount;
@@ -76,8 +78,11 @@ function updateDonation(card, amount) {
      
         console.log(historySection);
         const newHistory = document.createElement('div');
+        newHistory.classList.add('border-t', 'space-y-3', 'gap-4', 'border-b', 'h-32', 'p-4','w-full');
         console.log(newHistory);
-        // newHistory.innerHTML = `${newAmount} Taka is  Donated for ${}  `;
+        const date = new Date();
+        newHistory.innerHTML = `<h1 class="text-xl font-bold">${newAmount} Taka is  Donated for ${details} Bangladesh</h1>
+        <p class="text-sm font-normal text-gray-400">Date: ${date.toLocaleString()} Bangladesh Standard Time</p>`;
         historySection.appendChild(newHistory);
 
 
@@ -112,12 +117,13 @@ donationButtons.forEach(button => {
         const inputField = card.querySelector('input');
         const inputValue = inputField.value;
         const messageTo = card.querySelector('#info');
-        const message = messageTo.
-        console.log(messageTo);
+        const message = messageTo.innerText;
+        
+        // console.log(message);
 
         const donationAmount = validateInput(inputValue);
         if (donationAmount) {
-            updateDonation(card, donationAmount);
+            updateDonation(card, donationAmount, message);
             // displayHistory();
             inputField.value = ''; // Clear input
         }
