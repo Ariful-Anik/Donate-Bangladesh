@@ -1,26 +1,26 @@
 // -------page switch ----
 
-function redirection(className) {
-    var buttons = document.querySelectorAll('.' + className);
-    console.log(buttons);
+// function redirection(className) {
+//     var buttons = document.querySelectorAll('.' + className);
+//     console.log(buttons);
 
-    buttons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            // Get the current location
-            var currentLocation = window.location.pathname;
+//     buttons.forEach(function(button) {
+//         button.addEventListener('click', function() {
+//             // Get the current location
+//             var currentLocation = window.location.pathname;
 
-            if (currentLocation === '/blog.html') {
-                // Redirect to home if on blog page
-                window.location.href = '/index.html';
-            } else if(currentLocation === '/index.html') {
-                // Redirect to blog if on home page
-                window.location.href = '/blog.html';
-            }
-        });
-    });
-}
+//             if (currentLocation === '/blog.html') {
+//                 // Redirect to home if on blog page
+//                 window.location.href = '/index.html';
+//             } else if(currentLocation === '/index.html') {
+//                 // Redirect to blog if on home page
+//                 window.location.href = '/blog.html';
+//             }
+//         });
+//     });
+// }
 
-redirection('btn-blog');
+// redirection('btn-blog');
 
 // ----------Donation History button ---------
 
