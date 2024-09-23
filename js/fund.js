@@ -48,6 +48,7 @@ historyBtn.addEventListener('click', function(){
 // -------- Donation calculation ---------
 
 const currentBalanceElement = document.getElementById('accountBalance');
+const currentBalanceMobile = document.getElementById('accountBalance1');
 let accountBalance = parseInt(currentBalanceElement.textContent.split(' ')[0]);
 
 
@@ -69,6 +70,7 @@ function updateDonation(card, amount, details) {
     currentAmountElement.textContent = `${newAmount} BDT`;
     accountBalance -= amount;
     currentBalanceElement.textContent = `${accountBalance} BDT`;
+    currentBalanceMobile.textContent  = `${accountBalance} BDT`;
 
 
 
@@ -109,6 +111,17 @@ function validateInput(inputValue) {
 
     return donationAmount;
 }
+// ------show model--------
+function showModal() {
+    document.getElementById('donationModal').classList.remove('hidden');
+    document.getElementById('donationModal').classList.add('flex');
+    console.log("model active");
+    
+}
+
+function closeModal() {
+    document.getElementById('donationModal').classList.add('hidden');
+}
 
 // Event listener for donation buttons
 donationButtons.forEach(button => {
@@ -119,17 +132,20 @@ donationButtons.forEach(button => {
         const messageTo = card.querySelector('#info');
         const message = messageTo.innerText;
         
-        // console.log(message);
+        
 
         const donationAmount = validateInput(inputValue);
         if (donationAmount) {
             updateDonation(card, donationAmount, message);
-            // displayHistory();
+            
+            showModal();
             inputField.value = ''; // Clear input
         }
     });
 });
 
+
+document.getElementById('closeModal').addEventListener('click', closeModal);
 
 
 

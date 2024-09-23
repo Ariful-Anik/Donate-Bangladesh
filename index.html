@@ -52,7 +52,7 @@
             </div>
             <div class=" items-center gap-3 hidden lg:flex">
                 <img src="assets/coin.png" alt="">
-                <h1 id="accountBalance" class="font-medium text-xl text-[rgba(17,17,17,0.7)] ">75000 BDT</h1>
+                <h1 id="accountBalance1" class="font-medium text-xl text-[rgba(17,17,17,0.7)] ">75000 BDT</h1>
             </div>
 
            
@@ -110,7 +110,7 @@
                     </div>
                 
                     <!-- Donate Button -->
-                    <button class="w-full bg-lime-400 font-semibold text-xl py-3 rounded-lg hover:bg-lime-300 text-black">
+                    <button  class="w-full bg-lime-400 font-semibold text-xl py-3 rounded-lg hover:bg-lime-300 text-black">
                         Donate Now
                     </button>
                     </div>
@@ -191,12 +191,32 @@
                     <button class="w-full bg-lime-400 font-semibold text-xl py-3 rounded-lg hover:bg-lime-300 text-black">
                         Donate Now
                     </button>
-                    </div>
+                </div>
+
+
                 
             </div>
+
+            <div id="donationModal" class="fixed inset-0 fl items-center justify-center bg-gray-900 bg-opacity-50 hidden">
+                <div class="bg-white  rounded-lg shadow-lg p-6 max-w-md mx-auto">
+                    <h2 class="text-2xl font-bold text-center mb-4">Congrats!</h2>
+                    <div class="flex justify-center mb-4">
+                        <img class="w-12" src="assets/coin.png" alt="Success Icon" />
+                    </div>
+                    <p class="text-center text-lg">You Have Donated for Humankind <br> <strong>Successfully</strong></p>
+                    <div class="flex justify-center mt-6">
+                        <button id="closeModal" class="bg-lime-400 text-black hover:bg-gray-200 font-bold py-2 px-4 rounded">
+                            Close Confirmation
+                        </button>
+                    </div>
+                </div>
+            </div>
+           
         </section>
 
+       
 
+       
        
         
 
