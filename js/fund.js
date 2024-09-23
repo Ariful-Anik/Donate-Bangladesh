@@ -53,11 +53,9 @@ let accountBalance = parseInt(currentBalanceElement.textContent.split(' ')[0]);
 
 
 const donationButtons = document.querySelectorAll('.bg-lime-400');
-console.log(donationButtons);
+
  // Get all donation buttons
 
-// const historyDiv = document.getElementById('history-div');
-// const donationHistory = [];
 
 const historySection = document.getElementById('historySection');
 
@@ -76,12 +74,12 @@ function updateDonation(card, amount, details) {
 
     // Add to history
     
-    // Donated ${newAmount} BDT for ${this.parentNode.querySelector('h2').textContent} on ${new Date().toLocaleString()}
+    
      
-        console.log(historySection);
+        
         const newHistory = document.createElement('div');
         newHistory.classList.add('border-t', 'space-y-3', 'gap-4', 'border-b', 'h-32', 'p-4','w-full');
-        console.log(newHistory);
+        
         const date = new Date();
         newHistory.innerHTML = `<h1 class="text-xl font-bold">${newAmount} Taka is  Donated for ${details} Bangladesh</h1>
         <p class="text-sm font-normal text-gray-400">Date: ${date.toLocaleString()} Bangladesh Standard Time</p>`;
@@ -89,8 +87,7 @@ function updateDonation(card, amount, details) {
 
 
 
-    // const date = new Date();
-    // donationHistory.push(`Donated ${amount} BDT on ${date.toLocaleString()}`);
+   
 }
 
 
